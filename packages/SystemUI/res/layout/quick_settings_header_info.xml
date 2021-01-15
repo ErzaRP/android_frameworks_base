@@ -27,8 +27,43 @@
         <com.android.systemui.qs.QSHeaderInfoLayout
             android:id="@+id/status_container"
             android:layout_width="match_parent"
-            android:layout_weight="1"
+            android:layout_width="1"
             android:layout_height="match_parent">
+            
+            <FrameLayout
+                android:orientation="vertical"
+                android:gravity="left"
+                android:layout_gravity="left"
+                android:layout_width="wrap_content"
+                android:layout_width="match_parent" >
+
+            <TextClock
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:gravity="left"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="7dp"
+                android:textColor="?android:attr/textColorPrimary"
+                android:textSize="35sp"
+                android:textStyle="bold"
+                android:format12Hour="hh:mm"
+                android:format24Hour="HH:mm" />
+
+             <TextClock
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:gravity="left"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="7dp"
+                android:textColor="?android:attr/textColorPrimary"
+                android:textSize="27sp"
+                android:textStyle="bold"
+                android:format12Hour="EEE, MMM dd"
+                android:format24Hour="EEE, MMM dd" />
+
+            </FrameLayout>
 
             <LinearLayout
                 android:id = "@+id/alarm_container"
@@ -63,34 +98,13 @@
                 android:layout_width="@dimen/qs_header_separator_width"
                 android:layout_height="match_parent"
                 android:visibility="gone"/>
-                
-            <FrameLayout
-                android:orientation="vertical"
-                android:gravity="left"
-                android:layout_gravity="left"
-                android:layout_width="wrap_content"
-                android:layout_width="match_parent" >
-                
-            <TextClock
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="left"
-                android:gravity="left"
-                android:layout_marginStart="10dp"
-                android:layout_marginTop="7dp"
-                android:textColor="?android:attr/textColorPrimary"
-                android:textSize="35sp"
-                android:textStyle="bold"
-                android:format12Hour="hh:mm"
-                android:format24Hour="HH:mm" />
-                
-            </FrameLayout>
 
             <LinearLayout
                 android:id = "@+id/ringer_container"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:gravity="center_vertical"
+                android:gravity="right"
+                android:layout_marginTop="70dp"
                 android:focusable="true"
                 android:clickable="true">
 
